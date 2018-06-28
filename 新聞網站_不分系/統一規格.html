@@ -1,0 +1,370 @@
+<!--我一樣還是有把一些基本html,head,body,footer的架構打出來，大家主要複製自己沒有的就好-->
+<html>
+
+<head>
+    <!--這兩行是一個是viewport一個是可以放bootstrap用的，如果各位的head裡面沒有的話再複製進去就好-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!--這五個meta是在處理分享時的內容及縮圖，但目前還有些技術問題等待法賢幫忙，大家可以先複製，等我確定要怎麼解決大家再一起改-->
+
+    <!--分享時的小標，請改成各自頁面分享出去後想要的標題-->
+    <meta property="og:title" content="請輸入要分享的標題" />
+
+    <!--分享時的敘述-->
+    <meta property="og:description" content="歡慶周行一下台，大家一起來" />
+
+    <!--分享的網頁，放上github後網址為：https://你的ID.github.io/你的專案名稱/你的檔案名稱（如果是html不需要加.html，如果是圖檔還是要加上.png.jpg等等)-->
+    <meta property="og:url" content="https://stevenmanto.github.io/communication/home" />
+
+    <!--分享時的縮圖-->
+    <meta property="og:image" content="https://stevenmanto.github.io/communication/logo.png" />
+
+    <!--複製就對了XDDDDD-->
+    <meta property="og:type" content="website" />
+
+    <!-- 瀏覽器分頁會顯示我們的可愛笑臉XD -->
+    <link href="https://stevenmanto.github.io/communication/logo.png" rel="shortcut icon" />
+</head>
+
+<!--我只是方便分類才寫這麼多style的框，到時候都放在你們的style框裡面就好-->
+
+<!--我的網頁左右留白，大家可以參考-->
+<style>
+    article {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+</style>
+
+<!--header用的CSS tag，記得把body>header裡面的background-color改成你們面向的顏色：龐韻：藍／吉蓁：紅-->
+<style>
+    body>header {
+        background-color: #F2DCBA;
+        margin-bottom: 40px;
+    }
+
+    .flex-container {
+        display: flex;
+        margin: auto;
+        width: 300px;
+        justify-content: space-around;
+    }
+
+    .flex-item1 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: auto;
+        cursor: pointer;
+
+    }
+
+    .flex-item2 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: auto;
+        cursor: default;
+        text-align: center
+    }
+
+    .flex-item3 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: auto;
+
+        text-align: center
+    }
+
+    .flex-item4 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: auto;
+
+        text-align: center
+    }
+
+    .flex-item1:hover {
+        opacity: 0.5;
+    }
+
+    .flex-item3:hover {
+        opacity: 0.5;
+    }
+
+    .flex-item4:hover {
+        opacity: 0.5;
+    }
+</style>
+
+<!--footer用的CSS tag，記得把footer裡面的background-color改成你們面向的顏色：龐韻：藍／吉蓁：紅-->
+<style>
+    footer {
+        margin-top: 40px;
+        background-color: #D38D8E;
+    }
+
+    .flex-footer {
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .footer-item {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .footer-item:hover {
+        opacity: 0.5;
+    }
+</style>
+
+<!--相關閱讀用的CSS tag，記得把related-box裡面的background-color改成其他面向的顏色：龐韻：藍／吉蓁：紅／順：綠-->
+<!--改成其他背景色時建議可以改成.related-box1/.related-box2....這樣可以分別處理各自效果-->
+<!--舉例如下
+      .related-box1 {
+        width: 80%;
+        margin: 40px auto 0 auto;
+        padding: 20px;
+        background-color: #92AFB5;
+
+    }
+
+    .related-box1:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .related-box2 {
+        width: 80%;
+        margin: 40px auto 0 auto;
+        padding: 20px;
+        background-color: #D38D8E;
+
+    }
+
+    .related-box2:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .related-box3 {
+        width: 80%;
+        margin: 40px auto 0 auto;
+        padding: 20px;
+        background-color: #9FAA8F;
+    }
+
+    .related-box3:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+-->
+<style>
+    h5 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #6D615B
+    }
+
+    .related-font {
+        font-size: 16px;
+        font-weight: 500;
+        color: #6D615B
+    }
+
+    .related-box {
+        width: 80%;
+        margin: 40px auto 0 auto;
+        background-color: #F2DCBA;
+        padding: 20px;
+    }
+
+    .related-box:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .related-img {
+        width: 30%
+    }
+
+    .related-mobile-font {
+        font-size: 18px;
+        font-weight: 700;
+        color: #6D615B
+    }
+
+    .related-reading {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #6D615B
+    }
+</style>
+
+<!--以上三者的media query，提醒大家除了我給的東西以外不要用到h5這個tag，不然會因為我的第一個media query讓你的h5在手機狀態display nothing-->
+<!--裡面關於article左右margin留白的設定大家就自行斟酌，那是我的設定而已-->
+<!--這樣應該就大功告成（吧）_(:3」∠)_-->
+<style>
+    @media screen and (max-width: 767px) {
+        .flex-footer {
+            width: 200px;
+        }
+        .related-font {
+            display: none;
+        }
+        h5 {
+            display: none;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+        article {
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        .flex-footer {
+            width: 500px;
+        }
+        .related-img {
+            width: 20%
+        }
+        .flex-container {
+            width: 600px;
+        }
+        .flex-item1 {
+            width: 100px;
+        }
+        .flex-item2 {
+            width: 400px;
+            letter-spacing: 1.5
+        }
+        h5 {
+            font-size: 22px
+        }
+        .related-font {
+            font-size: 16px;
+        }
+        .related-mobile-font {
+            display: none;
+        }
+
+
+
+    }
+
+    @media screen and (min-width:1024px) {
+
+        article {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .flex-footer {
+            width: 800px;
+        }
+        .related-img {
+            width: 10%
+        }
+        .flex-container {
+            width: 600px;
+        }
+        .flex-item1 {
+            width: 100px;
+        }
+        .flex-item2 {
+            width: 400px;
+            letter-spacing: 2
+        }
+        .related-mobile-font {
+            display: none;
+        }
+
+
+
+    }
+</style>
+
+<body style="font-family: Microsoft JhengHei, Noto Sans TC, PingFang TC,Apple LiGothic Medium">
+    <!--網頁最上方的header，大家記得要把logo、fb、twitter的原檔載下來喔，放雲端在資料夾當中-->
+    <header>
+        <!--這是header上的笑臉-->
+        <div class="flex-container">
+            <a href="https://stevenmanto.github.io/communication/home" target="_self">
+                <div class="flex-item1">
+                    <img title="回首頁" src="logo.png" width="50px"></img>
+                </div>
+            </a>
+
+            <!--header的標題，不要超過六個字(含標點符號)-->
+            <div class="flex-item2"> 我們畢業啦！</div>
+
+            <!--FB跟twitter一家親-->
+            <div class="flex-item3">
+                <a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent('https://stevenmanto.github.io/communication/home'))));">
+                    <img title="分享到Facebook" src="fb.png" width="30px" />
+                </a>
+            </div>
+
+            <div class="flex-item4">
+                <a target="_blank" href="http://twitter.com/home/?status=首屆政大傳院大一大二不分系畢業了! https://stevenmanto.github.io/communication/home">
+                    <img title="分享到twitter" src="Twitter.png" width="30px" />
+                </a>
+            </div>
+        </div>
+
+    </header>
+    <article>
+        <!--最上方的相關閱讀四個字-->
+        <div class="related-reading">相關閱讀</div>
+
+        <!--相關閱讀的框框們，我只有用一個，其他的用同一個去複製改內容就好，這些我都有做RWD，讓平板以上寬度的才會顯示出簡述-->
+        <!--記得href中的網址改成要連結出去的網站，我這個面向的網址是https://stevenmanto.github.io/communication/mainpage，再麻煩韻+龐/吉+蓁把各自面向的主頁網址告訴我惹-->
+        <a href="https://stevenmanto.github.io/communication/page2" target="_self" style="text-decoration: none;color:#6D615B">
+            <div class="media related-box">
+                <img class="align-self-center mr-3 related-img" src="money.png" alt="拍片入場券　輔導金的現實面">
+                <div class="media-body">
+                    <!--相關閱讀的標題-->
+                    <h5>拍片入場券　輔導金的現實面</h5>
+                    <!--麻煩大家底下這兩行，不論你mobile上的標題是否要分成兩行，都請再複製進去，如果只需要一行就請把第二行刪掉-->
+                    <div class="related-mobile-font">拍片入場券</div>
+                    <div class="related-mobile-font">輔導金的現實面</div>
+                    <!--相關閱讀的簡述-->
+                    <p class="related-font">繼今年1月《52赫茲我愛你》賣出四千萬票房後，3月上映的《目擊者》也在十天內突破兩千萬票房，數字亮麗之外，也是國內近年少見的音樂劇和類型片，這兩部片在去年分別獲得電影輔導金新台幣1500萬元和2000萬元補助。</p>
+                </div>
+            </div>
+        </a>
+
+    </article>
+
+
+</body>
+
+<!--footer一樣記得把素材的icon載進去大家寫code的資料夾，如果發現自己那區的顏色不適合用黑色的，請再自行改成白色的icon版本，資料夾裡都有-->
+<footer>
+    <div class="flex-footer">
+        <a href="https://stevenmanto.github.io/communication/aboutus" target="_self" style="text-decoration: none;color:black">
+            <div class="footer-item">
+                <img src="info.png" width="50px"></img>
+                <div>關於我們</div>
+            </div>
+        </a>
+        <a href="https://stevenmanto.github.io/communication/contact" target="_self" style="text-decoration: none;color:black">
+            <div class="footer-item">
+                <img src="phone-book.png" width="50px"></img>
+                <div>聯絡我們</div>
+            </div>
+        </a>
+
+    </div>
+</footer>
+
+</html>

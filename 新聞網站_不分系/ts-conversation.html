@@ -1,0 +1,2591 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />-->
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: none;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+        }
+
+        body>header {
+            background-color: #F2DCBA;
+            margin-bottom: 0px;
+        }
+
+        .flex-container {
+            display: flex;
+            margin: auto;
+            width: 300px;
+            justify-content: space-around;
+            padding: 20px
+        }
+
+        .flex-item1 {
+            font-weight: bold;
+            font-size: 28px;
+            margin: auto;
+            cursor: pointer;
+
+        }
+
+        .flex-item2 {
+            font-weight: bold;
+            font-size: 20px;
+            margin: auto;
+            cursor: default;
+            text-align: center
+        }
+
+        .flex-item3 {
+            font-weight: bold;
+            font-size: 28px;
+            margin: auto;
+            text-align: center
+        }
+
+        .flex-item4 {
+            font-weight: bold;
+            font-size: 28px;
+            margin: auto;
+            text-align: center
+        }
+
+        .flex-item1:hover {
+            opacity: 0.5;
+        }
+
+        .flex-item3:hover {
+            opacity: 0.5;
+        }
+
+        .flex-item4:hover {
+            opacity: 0.5;
+        }
+
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            header {
+                width: 678px;
+            }
+
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            header {
+                width: 900px;
+            }
+
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>figure {
+            margin: 40px 0 0 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        article>p,
+        article>h2,
+        article>ul,
+        article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>ul,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            margin-left: 19px;
+            width: 46px;
+            height: 51px;
+        }
+
+        .menu {
+            width: 46px;
+            height: 46px;
+            background-color: #e1e1e1;
+        }
+
+        .author {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        .introduction {
+            align-self: flex-end;
+            font-size: 20px;
+            line-height: 1.82;
+            letter-spacing: 1.2px;
+            text-align: justify;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 100px;
+            background-color: #D38D8E;
+        }
+
+        .flex-footer {
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .footer-item {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-item:hover {
+            opacity: 0.5;
+        }
+
+        .icon-layout {
+            margin-bottom: 15px;
+            background-color: #7777;
+        }
+
+        .topic-intro-wrapper {
+            color: #333;
+            margin-bottom: -10px;
+            padding: 5px 0 20px;
+            width: 100%;
+        }
+
+        .topic-intro-text-wrapper {
+            margin-left: 0;
+            padding: 5 20px;
+            max-width: 750px !important;
+        }
+
+        .conversation-block1 {
+            margin-top: 20px;
+            background-color: #fdf4e7;
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        .conversation-block2 {
+            margin-top: 44px;
+            background-color: #fdb754;
+        }
+
+        .conversation-block3 {
+            margin-top: 44px;
+            background-color: #e8bc77;
+        }
+
+        .conversation-block4 {
+            margin-top: 44px;
+            background-color: #d18b1e;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .content {
+            margin-top: 0;
+            padding-top: 20px;
+            align-self: flex-end;
+            width: 100%;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .gv-chat-opens {
+            color: #333;
+            font-size: 14px;
+            line-height: 22px;
+            font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            text-align: center;
+        }
+
+        .gv-more-messages-wrap {
+            text-align: center;
+        }
+
+        .gv-more-messages {
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: darkgrey;
+            color: white;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            padding: 3px 13px;
+            border-radius: 100px;
+        }
+
+        .gv-topic-status span {
+            padding-right: 15px;
+        }
+
+        .gv-topic-status {
+            margin-top: 5px;
+            padding-bottom: 3px;
+            font-size: 13px;
+            line-height: 18px;
+            font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .topic-intro {
+            font-size: 15px;
+            line-height: 23px;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .topic-activity {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.5px;
+            color: #777
+        }
+
+        .pro-pic-right {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 20px;
+            float: right;
+        }
+
+        .pro-pic-left {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .row-wrapper {
+            display: flex;
+            margin-bottom: 5px;
+            clear: both;
+            opacity: 1;
+            -webkit-transition: opacity 1s linear;
+            -moz-transition: opacity 1s linear;
+            -o-transition: opacity 1s linear;
+            transition: opacity 1s linear;
+        }
+
+        .st-image-wrapper {
+            top: 0px;
+            align-self: flex-end;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .st-image img {
+            position: relative;
+            max-width: 70px;
+            max-height: 70px;
+            border-radius: 40px;
+            float: right;
+            margin-top: 10px;
+            border: 1px solid;
+        }
+
+        .border-color1 {
+            border: 2px solid #92AFB5;
+        }
+
+        .border-color2 {
+            border: 2px solid #9FAA8F;
+        }
+
+        .border-color3 {
+            border: px solid #D38D8E;
+        }
+
+        .icon-effect {
+            opacity: 0.5;
+        }
+
+        .icon-effect:hover {
+            opacity: 1;
+        }
+
+        .icon-image-wrapper {
+            margin-bottom: 15px;
+            position: float;
+        }
+
+        .icon-image {
+            position: relative;
+            max-width: 55px;
+            max-height: 55px;
+            border-radius: 40px;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .quote-wrapper {
+            display: inline-block;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 80%;
+            padding-left: 5px;
+            line-height: 20px !important;
+            font-size: 14px;
+            line-height: 22px;
+            font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+
+
+        .quote {
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 4px 4px 4px 4px;
+            padding: 10px;
+
+        }
+
+        .right-quote {
+            transition: opacity .5s linear 0s;
+            opacity: 0;
+        }
+
+        .to-animate .right-quote {
+            opacity: 1;
+        }
+
+        .left-quote {
+            transition: opacity .5s linear 0.5s;
+            opacity: 0;
+        }
+
+        .to-animate .left-quote {
+            opacity: 1;
+        }
+
+        .speaker {
+            margin-top: 5px;
+            display: inline-block;
+            color: #848484;
+            text-align: right;
+        }
+
+        .speaker-right {
+            float: right;
+        }
+
+        .row-wrapper.row-right {
+            flex-direction: row-reverse;
+        }
+
+        .row-right .st-image-wrapper {
+            margin-left: 10px;
+        }
+
+        .row-left .st-image-wrapper {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<article>
+    <header style="background-color: #D38D8E;">
+        <div class="flex-container">
+            <a href="https://stevenmanto.github.io/communication/home" target="_self">
+                <div class="flex-item1">
+                    <img title="回首頁" src="logo.png" width="50px"></img>
+                </div>
+            </a>
+            <!--header的標題，不要超過六個字(含標點符號)-->
+            <div class="flex-item2"> 師生踹共！</div>
+
+            <!--FB跟twitter一家親-->
+            <div class="flex-item3">
+                <a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent('https://stevenmanto.github.io/communication/home'))));">
+                    <img title="分享到Facebook" src="fb.png" width="30px" />
+                </a>
+            </div>
+
+            <div class="flex-item4">
+                <a target="_blank" href="http://twitter.com/home/?status=首屆政大傳院大一大二不分系畢業了! https://stevenmanto.github.io/communication/home">
+                    <img title="分享到twitter" src="Twitter.png" width="30px" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <header style="background-color: #e5e5e5 ;padding:15px; border-radius: 0 0 6px 6px;">
+        <div style="font-size: 32px;line-height:48px; margin: 15px 0 ;">他們，在畢業前一天對話。
+        </div>
+        <div style="margin-bottom:15px">
+            <span class="author">採訪／整理
+                <b>
+                    <span style="border-bottom: 1px solid #c71b0a;">吳旻蓁 鍾詠吉</span>
+                </b>
+            </span>
+        </div>
+        <p class="introduction">政大第一屆大一大二不分系的學生終於要畢業啦！究竟這屆同學對於大學這四年有什麼看法呢？就讓我們繼續看下去。
+        </p>
+    </header>
+
+    <!--4大icon(面向)／記得要設定錨點-->
+
+    <div class="row-wrapper" style="justify-content: space-evenly; border-radius:2px; margin-top: 20px;">
+        <div class="st-image-wrapper">
+            <div class="st-image row-right icon-effect">
+                <a href="#studies">
+                    <img class="icon-layout" src="./icon課業.png"></img>
+                    <div style="font-size:17px;">大學課業</div>
+                </a>
+            </div>
+        </div>
+        <div class="st-image-wrapper">
+            <div class="st-image row-right icon-effect">
+                <a href="#activities">
+                    <img class="icon-layout" src="./icon系上活動.png"></img>
+                    <div style="font-size:17px;">系上活動</div>
+                </a>
+            </div>
+        </div>
+        <div class="st-image-wrapper">
+            <div class="st-image row-right icon-effect">
+                <a href="#frienads">
+                    <img class="icon-layout" src="./icon同儕互動.png"></img>
+                    <div style="font-size:17px;">同儕互動</div>
+                </a>
+            </div>
+        </div>
+        <div class="st-image-wrapper">
+            <div class="st-image row-right icon-effect">
+                <a href="#relation">
+                    <img class="icon-layout" src="./icon跨界互動.png"></img>
+                    <div style="font-size:17px;">跨屆傳承</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--面向一：談大學課業與學用落差-->
+
+    <div id="studies" class="topic-intro-wrapper conversation conversation-block1">
+        <div class="topic-intro-text-wrapper">
+            <h2>大學課業：談談政大課程與學用落差</h2>
+            <div class="gv-topic-status"></div>
+            <span class="topic-activity">21個成員｜</span>
+            <span class="topic-activity">上次更新時間 28 June,2018</span>
+            <p class="topic-intro">
+                大學是進入社會的最後一道關卡，也是鍛鍊自我思考的殿堂。同學們在課堂上會學會許多不同的知識與技能，就像打線上遊戲一樣一開始先在新手村打怪，之後再出去探索世界，但同學們覺得學校提供的練等機會足夠嗎？</p>
+        </div>
+    </div>
+    <div id="content-1" class="content">
+        <!--對話群組成立一開始-->
+        <div class="gv-chat-outer-wrapper">
+            <div class="gv-chat-wrapper">
+                <div class="gv-chat-opens">20 Jun,2018對話成立</div>
+                <div class="gv-more-messages-wrap">
+                    <div class="gv-more-messages">顯示稍早訊息</div>
+                </div>
+            </div>
+        </div>
+        <!--對話開始：右邊對話；注意更換大頭貼-->
+
+        <div class="row-wrapper row-right right-quote">
+            <div class="st-image-wrapper">
+                <div class="st-image row-right">
+                    <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-right">
+                <div class="quote-wrapper gv-distance- row-right">
+                    <div class="quote">
+                        首先，暖身題：你對傳院所開的課程還滿意嗎，跟當初還沒進政大前想的一樣嗎？
+                    </div>
+                    <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left left-quote left-quote-1">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left border-color2" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F" >
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        我選課其實還算順利啦，除了一些必修課以外覺得都還行啊哈哈
+                    </div>
+                    <div class="speaker">馬翊 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left left-quote left-quote-2">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        滿不一樣的～ 但覺得還行～以為還是要考試那些，比想像中輕鬆；我也沒有很明確的想像 但有覺得應該比其他系好玩 可以學攝影等等
+                    </div>
+                    <div class="speaker">瑩慈 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left left-quote left-quote-3">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        我也是順利的人 而且也都有有興趣的課 因此沒有不滿；我好像對大學沒想像 也就沒期待 沒落差
+                    </div>
+                    <div class="speaker">品懿 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left left-quote left-quote-4">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left ㄈ" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote left-quote">
+                        滿意、跟想像不太一樣但滿意。算能探索自我而後又有針對不同需求開課
+                    </div>
+                    <div class="speaker">琇宇 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row-wrapper row-right">
+            <div class="st-image-wrapper">
+                <div class="st-image row-right">
+                    <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                </div>
+            </div>
+            <div class="row-wrapper row-right">
+                <div class="quote-wrapper gv-distance- row-right">
+                    <div class="quote">
+                        @楊琇宇 當初的想像是什麼？
+                    </div>
+                    <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        我以為會都是實做課然後也以為自己會很喜歡實做課，但後來上了一些偏向理論的課，覺得理論更適合自己～
+                    </div>
+                    <div class="speaker">琇宇 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        跟沒進政大前想的不一樣，一開始會覺得有點小失落，因為原本想像的是可以有更多實作課程，但後來會覺得基礎理論課也很重要，所以會慢慢變成滿意。
+                    </div>
+                    <div class="speaker">孟熹 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <!--對話開始：右邊對話；注意更換大頭貼-->
+
+        <div class="row-wrapper row-right">
+            <div class="st-image-wrapper">
+                <div class="st-image row-right">
+                    <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-right">
+                <div class="quote-wrapper gv-distance- row-right">
+                    <div class="quote">
+                        @陳孟熹 是覺得實作課太少嗎~
+                    </div>
+                    <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        大1大2的時候會這樣覺得，但也有可能是因為大一的時候太期待想要趕快脫離傳統的授課方式，一直幻想可以碰到很多器材啊或是學到"技術"
+                    </div>
+                    <div class="speaker">孟熹 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./黃立昇.jpg" style="border:1.5px solid #9FAA8F">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        跟本來的想像還是有落差，感覺蠻多課程都比較概論性、一般性的，想讓我們認識這個領域的感覺多過於培養我們的核心能力～
+                    </div>
+                    <div class="speaker">立昇 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-right">
+            <div class="st-image-wrapper">
+                <div class="st-image row-right">
+                    <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-right">
+                <div class="quote-wrapper gv-distance- row-right">
+                    <div class="quote">
+                        @黃立昇所以會希望偏實作、培養核心能力的課多一點是嗎？
+                    </div>
+                    <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./黃立昇.jpg" style="border:1.5px solid #9FAA8F">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        @吳旻蓁 對啊～或者是這堂概論課跟我分流之後的系核心的理論關聯在哪
+                    </div>
+                    <div class="speaker">立昇 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./陳笙笙.jpg" style="border:1.5px solid #D38D8E">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        當初其實對政大課程沒有很多想法，不過進來以後發現滿多課並沒有開，實作的課程也很少，所以有點失望。大一大二的課很有趣，不過相較新聞跟廣電，廣告系記得是沒有開課。分流之後，廣告系幾乎都是公關學程的課，但我是修傳播設計學程的，所以比較沒有興趣。 </div>
+                    <div class="speaker">笙笙 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./王耀聰.jpg" style="border:1.5px solid #D38D8E">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        我也是沒特別想什麼欸哈哈 有什麼課就上什麼，上的課除了理論課 其他都是滿有趣的
+                        <br> 雖然不一定能學到什麼 但都算是特別的課（也是忘記有什麼課</br>
+                    </div>
+                    <div class="speaker">耀聰 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-left">
+            <div class="st-image-wrapper">
+                <div class="st-image row-left">
+                    <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                </div>
+            </div>
+            <div class="row-wrapper row-left">
+                <div class="quote-wrapper gv-distance- row-left">
+                    <div class="quote">
+                        大一大二的時候有些理論課有點後悔沒認真上 所以分系之後常想不起來自己過去上了什麼 會有點埋怨課程，不分系的實作課程感覺比較偏單一的系
+                    </div>
+                    <div class="speaker">函瑾 24 Jun, 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-wrapper row-right">
+            <div class="st-image-wrapper">
+                <div class="st-image row-right">
+                    <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                </div>
+            </div>
+            <div class="row-wrapper row-right">
+                <div class="quote-wrapper gv-distance- row-right">
+                    <div class="quote">
+                        @蔡函瑾 是不是覺得大一大二不懂事，但回過頭就發現要畢業惹>
+                        < </div>
+                            <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            對哈哈哈 也有可能因為大三開始學到一些比較扎實的課 才有過去兩年都浪費很多時間的感覺。分流之後的課普遍都蠻滿意 只是設計學程的課真的好少設計
+                        </div>
+                        <div class="speaker">函瑾 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳映彤.jpg" style="border:1.5px solid #9FAA8F">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            普通，課程雖然比別系多元，但還是覺得可以開更多的課，雖然每堂的課可能都很重，也不見得每堂都能負擔得了
+                        </div>
+                        <div class="speaker">映彤 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            我其實也是沒什麼特別想像耶～我覺得高中跟大學是蠻大的坎，在讀大學前完全沒想過自己選課會是怎樣的感覺更別說課程內容了哈哈
+                        </div>
+                        <div class="speaker">思穎 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--對話開始：右邊對話；注意更換大頭貼-->
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            @陳勁維 為什麼會覺得不分系要嘛一年要嘛四年呢～？
+                        </div>
+                        <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            如果for探索興趣一年應該可以，大一就三系各開一堂概論性質的必修，如果是希望打破科系藩籬，就可以考慮四年都自主～ </div>
+                        <div class="speaker">勁維 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            ＃斜槓青年系的意思ㄇ（欸
+                        </div>
+                        <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            可以阿 但會很斜 哈哈 </div>
+                        <div class="speaker">勁維 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            哈哈了解～那大家在大學期間有參加過實習嗎？你認為傳院的課程規劃對實習有無幫助？
+                        </div>
+                        <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            PS覺得有幫助的話，可以簡單舉例～
+                        </div>
+                        <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            沒有的話，也可以分享實習過程中發現學校沒教但可以彌補的事）
+                        </div>
+                        <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            沒有，但有參加傳院的實習單位新聞實驗室，覺得多多少少有幫助到對新聞實務的了解。因為學業規劃所以一直沒有時間去實習，有考慮大五課比較少再去校外實習。
+                        </div>
+                        <div class="speaker">琇宇 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            在非廣告設計類的公司實習的時候，發現其實會使用軟體的人其實不多，課程有教到一點概念或操作是有幫助的（但如果沒自己再學也是很難做出東西哈哈哈哈）
+                        </div>
+                        <div class="speaker">函瑾 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            在公關公司實習發現有些時候幫助的是一些背景知識，不是直接的技術，因為比較知道這個生態或產業在幹嘛， 有時候做事比較可以掌握、比較有效率。
+                        </div>
+                        <div class="speaker">函瑾 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            在雜誌實習～我覺得大學報經歷在實務上滿有幫助的，履歷上應該也有些幫助。
+                        </div>
+                        <div class="speaker">瑩慈 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left ">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            我有在外實習過，但老實說我覺得和課程規劃的相關性並不大，比較真的可以用到的是硬體和軟體能力（當然也可能跟去的公司和工作內容有關啦）。
+                        </div>
+                        <div class="speaker">馬翊 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            補充一下，好像是因為我本科是廣告系，但去的公司和負責的部分都比較偏....廣電系一點？但這些能力和經驗就會和廣告系的課程相關性較低，不過跟校內實習單位影音實驗室學到的就非常相關了。
+                        </div>
+                        <div class="speaker">馬翊 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            新聞系跑大學報的期間，我覺得自己做的蠻差的，而且覺得一下子就過了，好像沒學到什麼。可是後來當政大校訊記者，大家來自各系，我發現我確實好很多，才發現原來我還是默默地成長了，因此就更有自信了。
+                        </div>
+                        <div class="speaker">品懿 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            另外也同意瑩慈說的，我也覺得對履歷很好，可以放上超多自己的新聞文章、影音新聞，google自己名字也會跑一堆自己的文章出來。
+                        </div>
+                        <div class="speaker">品懿 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            @Chiu Doris 沒也，只有小心別踩到妳耶！
+                        </div>
+                        <div class="speaker">勁維 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            <img src="./35817927_2268635053154341_7300848231674544128_n.png" width="100%" alt="">
+                        </div>
+                        <div class="speaker">勁維 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            @陳勁維...會先浮現你比較想看的?
+                        </div>
+                        <div class="speaker">品懿 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            同意品懿，在公司跟別系、別校的真的有差，主管也會選擇交待一些比較重要的工作，或是需要快速濃縮資訊的工作。 </div>
+                        <div class="speaker">瑩慈 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            學校教的內容對方法論有點幫助但也有限，實習能學到別的內容，但我會覺得也不急於學生時期就學到啦～
+                        </div>
+                        <div class="speaker">勁維 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            大學期間有實習，一個是在電視台，一個是在影展。傳院的課程其實幫助蠻大的，雖然我自己沒有讀得很認真，可是在傳院上課所知道的皮毛，就我個人經驗，在這些實習單位面試時通常可以讓主管覺得你懂很多(但其實就真的懂皮毛他再問下去我就會死) ，會讓主管對我印象很深刻，算是一個優勢，像是我可能可以說出一些媒體在大環境下的變革，或是XXX的出現對資訊媒介造成甚麼影響
+                            (可能老師上課有講過的例子)，他們就會覺得我hen厲害。
+                        </div>
+                        <div class="speaker">孟熹 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./黃立昇.jpg" style="border:1.5px solid #9FAA8F">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            我有在一間媒介電商管理顧問公司實習～那時候是因為科系背景符合進去的，那個職缺是電商策略撰稿實習生。
+                        </div>
+                        <div class="speaker">立昇 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./黃立昇.jpg" style="border:1.5px solid #9FAA8F">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            但我個人覺得除了科系背景引領我入門磚之外，學校教導我的理論性在實際的商業場域應用性真的不大，因為外面的應用強調觀察、分析、歸納跟統整，學校幾乎不會教這個。
+                        </div>
+                        <div class="speaker">立昇 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./王耀聰.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            我覺得學校的東西多少是有些幫助的，雖然不是那麼直接課堂上的東西就能幫忙找到實習，但因為很多元的學很多東西，能找的實習範圍變得很廣。
+                        </div>
+                        <div class="speaker">耀聰 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./陳映彤.jpg" style="border:1.5px solid #9FAA8F">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            有過實習，但覺得直接的影響不大，課程主要建立基本的知識，影響是潛移默化，興趣、價值觀、態度都會有影響或幫助，實習後覺得重要的是做事的方式（這還是要看個人造化），所以我覺得課程的影響還蠻有限的。但我覺得實習單位（影音實驗室）有給我蠻多經驗或實務可以寫在履歷上。
+                        </div>
+                        <div class="speaker">映彤 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            在旅遊相關的網路公司實習，我覺得主管在談行銷策略的時候確實是比其他非廣告系的人還要清楚，或是比較快了解，但其他就覺得沒什麼太大差別了。
+                        </div>
+                        <div class="speaker">思穎 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            所以大家覺得多數工作上的應用還是在實習的過程中才慢慢學到是嗎？
+                        </div>
+                        <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            但我也同意課程是潛移默化的作用，慢慢之中就會有一些知識基模，或是累積一些專有名詞，就可以比較快速進入狀況（尤其是英文的專有名詞）。
+                        </div>
+                        <div class="speaker">馬翊 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./王耀聰.jpg" style="border:1.5px solid #D38D8E">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            對，有實務的經驗會學得特別快，我覺得廣告很多東西學校教的跟業界的會差蠻多的，列如業界有很多術語或簡稱。
+                        </div>
+                        <div class="speaker">耀聰 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            我當時跑完大學報在雜誌實習，履歷可以放很多作品很加分，大學報實務經驗培養的應變能力在實習的時候也都派上用場。
+                        </div>
+                        <div class="speaker">婉恬 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-right">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-right">
+                        <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-right">
+                    <div class="quote-wrapper gv-distance- row-right">
+                        <div class="quote">
+                            那我們來聽聽老師的看法吧！
+                        </div>
+                        <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./43136256_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            （以新聞系學生來說）我覺得學生比較明確知道自己想要學的是什麼，然後對自己的專業知識地圖是比較明確、比較有的，然後對自己的未來是比較有期待的。
+                        </div>
+                        <div class="speaker">裕棻 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./43136256_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            不過課程內容偏理論不是不分系的結果，這中間沒有因果關係，就是看他自己選課選到什麼。 </div>
+                        <div class="speaker">裕棻 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./43136256_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            從前的四年專業學科壓縮成兩年的學習，從前的四年的學科的狀況是，有非常多的共同必修課跟理論課，然後只是現在把那些集中到一二年級來修，但一二年級在大二的時候就可以選各個不同分流的科目，只是當時還沒分流而已。
+                        </div>
+                        <div class="speaker">裕棻 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./43136256_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            當初在設定課程的時候會比較理想，想說學生進來之後他大概會花一年時間理解，到大二的時候大慨會偏向幾個方向，然後大概去看A還B還C，之後他大概會選一個方向，然後到大三大四的時候，理想上是會有明確的修課的計畫，然後在這兩年之內就玩成這樣，那以前是把這些很鬆散的分在四年裡。
+                        </div>
+                        <div class="speaker">裕棻 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-wrapper row-left">
+                <div class="st-image-wrapper">
+                    <div class="st-image row-left">
+                        <img class="pro-pic-left" src="./43136256_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="quote-wrapper gv-distance- row-left">
+                        <div class="quote">
+                            其實我們並沒有把課減太多，現在只是把課集中到大三大四，課是一樣的，只是時程上面縮短，學生會覺得時間上心裡準備不夠，需要消化我覺得這個也許學生這個心情我好像可以明白，需要一點時間去籌備自己成為這個專業領域的一份子，可能兩年學生覺得不夠。也確實是各個系的前輩的專業知識修了一些之後才比較知道自己適合什麼，但是最理想的狀況大概沒有辦法預先設計好。
+                        </div>
+                        <div class="speaker">裕棻 24 Jun, 2018</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--面向二：談系上活動-->
+
+            <div id="activities" class="topic-intro-wrapper conversation conversation-block2">
+                <div class="topic-intro-text-wrapper">
+                    <h2>傳院人森：談談政大四年的系上生活</h2>
+                    <div class="gv-topic-status"></div>
+                    <span class="topic-activity">21個成員｜</span>
+                    <span class="topic-activity">上次更新時間 28 June,2018</span>
+                    <p class="topic-intro">
+                        除了課程之外，系上活動也是是同學們全新投注心力的地方，每個系都會辦許多不同的活動，有的是用來聯絡感情、有的是要共同籌辦活動，像是之夜、系烤、營隊等等；另外，不少友情與愛情也是通過系上活動出現的呢！</div>
+            </div>
+            <div id="content-2" class="content">
+                <!--對話群組成立一開始-->
+                <div class="gv-chat-outer-wrapper">
+                    <div class="gv-chat-wrapper">
+                        <div class="gv-chat-opens">20 Jun,2018對話成立</div>
+                        <div class="gv-more-messages-wrap">
+                            <div class="gv-more-messages">顯示稍早訊息</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--對話開始：左邊對話；注意更換大頭貼-->
+
+
+                <div class="row-wrapper row-right">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-right">
+                            <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-right">
+                        <div class="quote-wrapper gv-distance- row-right">
+                            <div class="quote">
+                                那我們要進入比較輕鬆的部分囉～～
+                            </div>
+                            <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-right">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-right">
+                            <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-right">
+                        <div class="quote-wrapper gv-distance- row-right">
+                            <div class="quote">
+                                大學四年中，你有參加過任何系上活動嗎，哪個最讓你印象深刻？過程中有什麼收穫？
+                            </div>
+                            <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-right">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-right">
+                            <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-right">
+                        <div class="quote-wrapper gv-distance- row-right">
+                            <div class="quote">
+                                PS 這題不用太拘謹哈哈，若有掛也可以順便爆料（例如大家在大一大二發生的糗事或有趣的事件XDD）
+                            </div>
+                            <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left left-quote left-quote-1">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                這題應該是@Mira Ma的專長。
+                            </div>
+                            <div class="speaker">勁維 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                印象最深應該就包種茶吧哈哈（也包括認識婉恬的部分）。宿營印象應該僅次包種～是傳院唯一、也是最後一次有這麼多人參加的活動哈哈
+                            </div>
+                            <div class="speaker">勁維 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                包種茶（因為這個認識群組裡的很多人ㄟ）
+                            </div>
+                            <div class="speaker">婉恬 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                阿對還有廣電營（跟很多包種茶朋友再續前緣），結果最後讀了新聞。
+                            </div>
+                            <div class="speaker">婉恬 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                迎新、宿營、包種、廣電營（兩屆）、新聞實驗室，就是大家一起苦中作樂的過程。
+                            </div>
+                            <div class="speaker">婉恬 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                包種茶最深刻，因為那時候最年幼、最願意瘋狂燃燒，大家都要做到沒公車上山，再一起走上山，後來還有參加廣告營跟宿營，但就體力漸漸不支⋯XD
+                            </div>
+                            <div class="speaker">函瑾 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                參加包種、文化盃、宿營(剛升大一)、辦宿營、廣電營、院烤。印象深刻的是還是小大一的時候，覺得宿營也太爆幹好玩了吧，然後學長姊看起來都很文青、小大一都土到爆，也在宿營認識很多人，但現在這些人有些真的人間蒸發，有的也變很不熟哈哈哈哈，蠻特別ㄉ。
+                            </div>
+                            <div class="speaker">孟熹 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                幾乎沒參加過....有參加過宿營啦，但沒什麼特殊印象。
+                            </div>
+                            <div class="speaker">琇宇 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                還有參加傳院院排，因此認識很多人，覺得很好玩，而且因為院牌成員異質性較高，讓我分系之後各系都有朋友。
+                            </div>
+                            <div class="speaker">琇宇 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./陳笙笙.jpg" style="border:1.5px solid #D38D8E">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                包種、宿營、廣告營、啦啦。印象比較深刻的是廣告營跟啦啦，廣告營因為是從大一當工人到大二辦活動，覺得學到很多不一樣的事～啦啦應該是大學裡面覺得最熱血的活動，第一次感覺到大家一起做一件事，很有像以前高中之類有一個團體（班級）的感覺。
+                            </div>
+                            <div class="speaker">笙笙 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                廣告營～但沒什麼印象深刻的，只是整體而言很開心～收穫ㄉ部分⋯認識更多學長姐。
+                            </div>
+                            <div class="speaker">瑩慈 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                包種、文化盃、廣電營、宿營都滿開心的啊，然後因此我有很多朋友都在廣電系，導致到大四了還有人不知道我是廣告系呢！！
+                            </div>
+                            <div class="speaker">馬翊 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                啊！傳院之夜也滿有印象的。
+                            </div>
+                            <div class="speaker">瑩慈 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-wrapper row-left">
+                    <div class="st-image-wrapper">
+                        <div class="st-image row-left">
+                            <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                        </div>
+                    </div>
+                    <div class="row-wrapper row-left">
+                        <div class="quote-wrapper gv-distance- row-left">
+                            <div class="quote">
+                                @周瑩慈妳主角當到忘記？
+                            </div>
+                            <div class="speaker">勁維 24 Jun, 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--面向三：談大學課業與學用落差-->
+
+                <div id="frienads" class="topic-intro-wrapper conversation conversation-block3">
+                    <div class="topic-intro-text-wrapper">
+                        <h2>同儕相處：那些年，我們一起共患難的夥伴</h2>
+                        <div class="gv-topic-status"></div>
+                        <span class="topic-activity">21個成員｜</span>
+                        <span class="topic-activity">｜上次更新時間 28 June,2018</span>
+                        <p class="topic-intro">
+                            朋友絕對是大學生活中不可少的一部分，不論是課堂上找組員、下課相約吃飯，或是放假結伴出去玩等等，都是同儕間重要的互動。但該如何在廣大的系中找到志同道合的朋友呢？</p>
+                    </div>
+                </div>
+                <div id="content-3" class="content">
+                    <!--對話群組成立一開始-->
+                    <div class="gv-chat-outer-wrapper">
+                        <div class="gv-chat-wrapper">
+                            <div class="gv-chat-opens">20 Jun,2018對話成立</div>
+                            <div class="gv-more-messages-wrap">
+                                <div class="gv-more-messages">顯示稍早訊息</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--對話開始：左邊對話；注意更換大頭貼-->
+
+                    <div class="row-wrapper row-right">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-right">
+                                <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-right">
+                            <div class="quote-wrapper gv-distance- row-right">
+                                <div class="quote">
+                                    好了解～～我先進入下一題囉。那大家覺得分流之後，跟同屆的相處有什麼改變嗎～？
+                                </div>
+                                <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    有～大一大二最常相處的朋友都在廣告系，剛進新聞系真的滿孤單的，而且跑大學報ㄉ辛苦就很難跟以前的朋友聊。
+                                </div>
+                                <div class="speaker">瑩慈 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    遇到非同系的機率降低不少，偶爾遇到的第一句話都是：「ㄟ～～好久不見。」
+                                </div>
+                                <div class="speaker">婉恬 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳映彤.jpg" style="border:1.5px solid #9FAA8F">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    同意分流之後很少遇到不同系的朋友，開始只會跟同系的朋友相處。
+                                </div>
+                                <div class="speaker">映彤 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    分流之後真的跟很多人的開場白都是好久不見！
+                                </div>
+                                <div class="speaker">思穎 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    分流後，有些原本比較熟識的朋友被分到別的系，不能一起上課會有點小難過，分系後也會嚇到：蝦原來這個人是傳院的喔？或是有些人你真的一輩子都不會講到話(我畢展期間還+兩個人好友史上最尷尬)。
+                                </div>
+                                <div class="speaker">孟熹 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./蔡函瑾.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我也是，本來的朋友都是分到別系；其實本來的朋友還是可以見面，但比較不像同學一起上課什麼的，比較像約高中朋友的感覺，只是還有地利之便，有想到一個優點就是因為打散重來，沒想過會認識的也變成了朋友。
+                                </div>
+                                <div class="speaker">函瑾 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    但也有想過是不是因為傳院的大家都在大學期間有很多自己想做的事情，所以就都各自努力，或兩三人成群，好像自己有沒有抓住朋友比較重要，但當然有一起修課會方便很多啦。
+                                </div>
+                                <div class="speaker">孟熹 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我也覺得好像就是認識很多本來不認識的人～可是說起來也還好因為傳院課那麼少其實沒有一起修也還好（？），就修課不是唯一交流的管道。
+                                </div>
+                                <div class="speaker">琇宇 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    大一大二是輕鬆的與很多很多人度過，大家來自四面八方、形形色色，因此歡樂。大三則是不輕鬆的與特定的人度過，但因為不輕鬆且只有這些人能依賴，而感情堅定。
+                                </div>
+                                <div class="speaker">品懿 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./王耀聰.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我覺得大三其實還好，因為蠻多必修課之類的，跟分到別系的朋友也還是蠻容易聯絡，大四比較可怕，超難見到其他人。
+                                </div>
+                                <div class="speaker">耀聰 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳笙笙.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    分流以後好像比較疏離耶～可能本來比較熟的朋友很多都在不同系，而且廣告有夠多人，所以整體感情比較差（？）
+                                </div>
+                                <div class="speaker">笙笙 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳笙笙.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    原本廣告系熟的就是一群廣告營的朋友們，所以如果系上有課也會自然分一組，也比較不會認識到新同學，但比起大一就分系，反而覺得可以認識比較多傳院不同系的朋友也很好～
+                                </div>
+                                <div class="speaker">笙笙 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我覺得大三後比較少見面跟分系關係還好～跟大家開始有自己的規劃比較有關～
+                                </div>
+                                <div class="speaker">勁維 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-right">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-right">
+                                <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-right">
+                            <div class="quote-wrapper gv-distance- row-right">
+                                <div class="quote">
+                                    所以大家覺得大一二跟分流之後的朋友圈有流動嗎？如果變化很大、大家也各自忙其他的事，那這樣感情有變淡嗎？ </div>
+                                <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我自己是本來朋友圈就是較多選新聞的因此沒差，而非新聞的朋友就當室友，或一起選同堂課，所以還是能有交流時間。
+                                </div>
+                                <div class="speaker">品懿 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    如果說變化倒是還好，只是生活圈會變得小很多。應該是說，比較沒有大活動可以讓很多人聚在一起，可能會見面的都是同個實習單位的，或是有一起上課的。
+                                </div>
+                                <div class="speaker">馬翊 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    實習的話，我大三和大四上其實沒有在實習哈哈哈哈，所以也不知道是不是這個關係啦。 </div>
+                                <div class="speaker">馬翊 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./陳映彤.jpg" style="border:1.5px solid #9FAA8F">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    不至於感情會變淡，就是要自己約出來吃飯見面，沒辦法在上課順便見面，像我現在的室友是新聞系的，從大一就認識到現在，也沒有因此變淡。
+                                </div>
+                                <div class="speaker">映彤 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./黃立昇.jpg" style="border:1.5px solid #9FAA8F">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我也覺得也不至於感情變淡，但維繫上真的要做出比較多努力哈哈～
+                                </div>
+                                <div class="speaker">立昇 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    變淡其實還好，只是以前有很多機會可能同一堂課或活動等等，大家可以一大群人聚在一起，但現在就是變成兩三個約這樣，我覺得只是聚會的模式改變而已。
+                                </div>
+                                <div class="speaker">思穎 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div class="quote">
+                                    我室友都傳院的，大家其實在宿舍也是各忙各的事，但我覺得不等於是感情變淡。
+                                </div>
+                                <div class="speaker">思穎 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-wrapper row-right">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-right">
+                                <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-right">
+                            <div class="quote-wrapper gv-distance- row-right">
+                                <div class="quote">
+                                    了解～感謝大家回覆，那來聽聽昌德老師分享自己的大學同儕相處吧
+                                </div>
+                                <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row-wrapper row-left">
+                        <div class="st-image-wrapper">
+                            <div class="st-image row-left">
+                                <img class="pro-pic-left" src="./189628_n.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-left">
+                            <div class="quote-wrapper gv-distance- row-left">
+                                <div style="width:100%">
+                                    <audio controls>
+                                        <source type="audio/mp3" src="./昌德_採訪（經驗分享）.m4a" />
+                                    </audio>
+                                </div>
+                                <div class="speaker">昌德 24 Jun, 2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--面向四：談大學課業與學用落差-->
+
+                    <div id="relation" class="topic-intro-wrapper conversation conversation-block4">
+                        <div class="topic-intro-text-wrapper">
+                            <h2>跨屆傳承：談上下屆的經驗傳承</h2>
+                            <div class="gv-topic-status"></div>
+                            <span class="topic-activity">21個成員｜</span>
+                            <span class="topic-activity">上次更新時間 28 June,2018</span>
+                            <p class="topic-intro">
+                                學長姐、學弟妹是組成大學生活回憶的重要因素，屆與屆之間的傳承也很重要，包括經驗傳承、金費傳承，當然也有課本的傳承，以及選課資訊的傳承，而這些互動需要仰賴屆與屆之間的交流與熟悉程度，這時候家制度就成為中間最好的橋樑。
+                        </div>
+                    </div>
+                    <div id="content-4" class="content">
+                        <!--對話群組成立一開始-->
+                        <div class="gv-chat-outer-wrapper">
+                            <div class="gv-chat-wrapper">
+                                <div class="gv-chat-opens">20 Jun,2018對話成立</div>
+                                <div class="gv-more-messages-wrap">
+                                    <div class="gv-more-messages">顯示稍早訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--對話開始：左邊對話；注意更換大頭貼-->
+
+                        <div class="row-wrapper row-right">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-right">
+                                    <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-right">
+                                <div class="quote-wrapper gv-distance- row-right">
+                                    <div class="quote">
+                                        那進入最後一題，關於傳院的分家制度，大家有什麼看法？
+                                    </div>
+                                    <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-right">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-right">
+                                    <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-right">
+                                <div class="quote-wrapper gv-distance- row-right">
+                                    <div class="quote">
+                                        除了系上同屆同學外，跟下屆的學弟妹熟嗎？
+                                    </div>
+                                    <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row-wrapper row-right">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-right">
+                                    <img class="pro-pic-right" src="./young.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-right">
+                                <div class="quote-wrapper gv-distance- row-right">
+                                    <div class="quote">
+                                        在傳院不分系時有直屬學長姐，那時家互動的狀況怎樣？與非直屬學長姐相處如何？
+                                    </div>
+                                    <div class="speaker speaker-right">詠吉 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./馬翊.jpg" style="border:1.5px solid #9FAA8F"alt="">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        跟上屆還行，但是跟下屆開始超級不熟XDD，（除了中心的學弟妹以外真的幾乎都不太認識了。其實我大一時還有吃過不只一次的家聚，那時的學長姐都是新聞系的。好像新聞系比較有在盛行分家制度？ </div>
+                                    <div class="speaker">馬翊 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./洪婉恬.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        我完全都沒有ㄟ哈哈哈哈慘，不管是上還下...。我除了大學報的採主們之外，幾乎都不太熟，直屬都忘記是誰...我道歉。
+                                    </div>
+                                    <div class="speaker">婉恬 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./李思穎.jpg" style="border:1.5px solid #D38D8E">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        我跟下一屆也超不熟，我的直屬在我開學第一天認親之時，開口的第一句話是學姐我想問你轉系要怎麼轉.....
+                                    </div>
+                                    <div class="speaker">思穎 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./周瑩慈.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        不熟ㄟ哈哈哈哈哈，靠大學報認識一些而已。 </div>
+                                    <div class="speaker">瑩慈 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./陳孟熹.jpg" style="border:1.5px solid #9FAA8F">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        跟弟妹除了廣電盈認識的完全不熟，分家我被分到新聞家....我會希望大三分流後可以有系內活動讓大家再凝聚一點。
+                                    </div>
+                                    <div class="speaker">孟熹 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./楊琇宇.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        不熟，但有認識一些實驗室的。
+                                    </div>
+                                    <div class="speaker">琇宇 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./陳映彤.jpg" style="border:1.5px solid #9FAA8F">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        我也是除了影音實驗室的都不熟，本來傳院就沒什麼吃家聚，我甚至被直屬學長忽視，從來都沒有往來XD
+                                    </div>
+                                    <div class="speaker">映彤 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./王耀聰.jpg" style="border:1.5px solid #D38D8E">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        學長姐認識蠻多的，而且也真的很照顧我們，學弟妹也是有認識一些，但感覺就跟他們以前一整個系的熟悉程度差很多，以前廣告的會從大一到大四都多少有認識，現在連送舊都沒有哈哈。直屬就真的不熟，直屬學妹算是熟的，但是因為是其他活動。
+                                    </div>
+                                    <div class="speaker">耀聰 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        1.我覺得熟（還是自以為？）
+                                        <br>2.不分系時直屬學長很不熟，但我跟直屬學妹很ok。</br>
+                                    </div>
+                                    <div class="speaker">品懿 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        直屬學長、直屬學妹都不是新聞，因此應該不是興趣、志向不同的問題。因為系籃的關係，認識很多新聞系學長姐。 </div>
+                                    <div class="speaker">品懿 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        補充:新聞系有新分家制度 但他們差一年就要畢業了，其實已經不管學校的事，我是剛好抽到本來就認識的因此還有互動。
+                                    </div>
+                                    <div class="speaker">品懿 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        上下一屆都還行，但完全沒參與到分家制度哈哈。 </div>
+                                    <div class="speaker">勁維 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-right">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-right">
+                                    <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-right">
+                                <div class="quote-wrapper gv-distance- row-right">
+                                    <div class="quote">
+                                        所以大家覺得造成屆與屆之間較不熟的原因是什麼？
+                                    </div>
+                                    <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-right">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-right">
+                                    <img class="pro-pic-right" src="./wu.jpg" style="border:1.5px solid #92AFB5" alt="">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-right">
+                                <div class="quote-wrapper gv-distance- row-right">
+                                    <div class="quote">
+                                        我們是大一大二不分系有關嗎？
+                                    </div>
+                                    <div class="speaker speaker-right">旻蓁 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./邱品懿.jpg" style="border:1.5px solid #92AFB5">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        可能傳承下來的習慣有差？新聞系學長姊蠻熱情的。
+                                    </div>
+                                    <div class="speaker">品懿 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-wrapper row-left">
+                            <div class="st-image-wrapper">
+                                <div class="st-image row-left">
+                                    <img class="pro-pic-left" src="./陳勁維.jpg" style="border:1.5px solid #D38D8E">
+                                </div>
+                            </div>
+                            <div class="row-wrapper row-left">
+                                <div class="quote-wrapper gv-distance- row-left">
+                                    <div class="quote">
+                                        跟弟妹不確定，但我覺得跟上面熟不熟跟不分系有點關係～活動大多分系舉辦，不分系後跟哥姐可能比較難有系上的團體情感～
+                                    </div>
+                                    <div class="speaker">勁維 24 Jun, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+
+</article>
+
+<footer>
+    <div class="flex-footer">
+        <a href="https://stevenmanto.github.io/communication/aboutus" target="_self" style="text-decoration: none;color:black;border-bottom:none;">
+            <div class="footer-item">
+                <img src="info.png" width="50px" style="margin-bottom: 15px;"></img>
+                <div>關於我們</div>
+            </div>
+        </a>
+        <a href="https://stevenmanto.github.io/communication/contact" target="_self" style="text-decoration: none;color:black;border-bottom:none;">
+            <div class="footer-item">
+                <img src="phone-book.png" width="50px" style="margin-bottom: 15px;"></img>
+                <div>聯絡我們</div>
+            </div>
+        </a>
+
+    </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script>
+    new Waypoint({
+        element: document.getElementById('content-1'),
+        offset: '60%',
+        handler: function () {
+            var ele = document.getElementById('content-1');
+            ele.className += ' to-animate';
+        }
+    })
+
+    new Waypoint({
+        element: document.getElementById('content-2'),
+        offset: '60%',
+        handler: function () {
+            var ele = document.getElementById('content-2');
+            ele.className += ' to-animate';
+        }
+    })
+
+    new Waypoint({
+        element: document.getElementById('content-3'),
+        offset: '60%',
+        handler: function () {
+            var ele = document.getElementById('content-3');
+            ele.className += ' to-animate';
+        }
+    })
+
+    new Waypoint({
+        element: document.getElementById('content-4'),
+        offset: '60%',
+        handler: function () {
+            var ele = document.getElementById('content-4');
+            ele.className += ' to-animate';
+        }
+    })
+
+
+</script>
+
+
+</body>
+
+</html>
